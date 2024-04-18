@@ -17,7 +17,6 @@ public class WriteDataIntoPropertiesFile {
 		
 		FileOutputStream fos = new FileOutputStream(".\\src\\test\\resources\\CommonData2.properties");
 		p.store(fos, "The data is stored");
-		
 
 	}
 

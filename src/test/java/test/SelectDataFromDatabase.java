@@ -11,7 +11,7 @@ import com.mysql.cj.jdbc.Driver;
 public class SelectDataFromDatabase {
 
 	public static void main(String[] args) throws SQLException {
-
+		
 		//Step 1: Register Driver
 		Driver driver = new Driver();
 		DriverManager.registerDriver(driver);
@@ -33,5 +33,4 @@ public class SelectDataFromDatabase {
 		//Step 5: Close Connection
 		con.close();
 	}
-
 }

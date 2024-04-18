@@ -14,10 +14,9 @@ public class ReadDataFromExcelSheet {
 	
 	public static void main(String[] args) throws EncryptedDocumentException, IOException {
 		
-		Scanner sc = new Scanner(System.in);
-		FileInputStream fis = new FileInputStream(".\\src\\test\\resources\\Read.xlsx");
+		FileInputStream fis = new FileInputStream(".\\src\\test\\resources\\ReadData1.xlsx");
 		Workbook wb = WorkbookFactory.create(fis);
-		String expValue = "Mac";
+		String expValue = "lina";
 		
 		Sheet sh = wb.getSheet("Sheet1");
 		
@@ -26,15 +25,17 @@ public class ReadDataFromExcelSheet {
 		int lastCell = sh.getRow(firstRow).getLastCellNum();
 		int firstCell = sh.getRow(firstRow).getFirstCellNum();
 		
-		for(int r = 0; r <= 4; r++) {
-			for(int c = 0; c <= 2; c++) {
-				String firstColumn = wb.getSheet("Sheet1").getRow(r).getCell(c).getStringCellValue();
-				System.out.println(firstColumn);
+		for(int r = firstRow; r<=lastRow; r++) {
+			
+			String actualValue = sh.getRow(r).getCell(firstCell).getStringCellValue();
+			if(actualValue.equalsIgnoreCase(expValue)) {
+				for(int c = firstCell; c< lastCell; c++) {
+					
+					String data = sh.getRow(r).getCell(c).getStringCellValue();
+					System.out.print(data+" ");
+				}
 			}
-			
-			
 		}
-		
 	}
 
 }
