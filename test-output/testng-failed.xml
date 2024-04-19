@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="SelectorsHubPractice.Practice1">
+      <class name="TenAssignments9April.AvedaTest">
         <methods>
-          <include name="enterUserEmail"/>
+          <include name="selectAllProducts"/>
         </methods>
-      </class> <!-- SelectorsHubPractice.Practice1 -->
+      </class> <!-- TenAssignments9April.AvedaTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

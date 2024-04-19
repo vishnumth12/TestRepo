@@ -2,7 +2,6 @@ package TenAssignments9April;
 
 import java.util.LinkedHashSet;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Set;
 
 import org.openqa.selenium.By;
@@ -11,7 +10,7 @@ import org.openqa.selenium.WindowType;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
-public class CloseTheNthWindow {
+public class CloseTheNthWindowTest {
 	
 	@Test
 	public void closeTheNthWindow() {
